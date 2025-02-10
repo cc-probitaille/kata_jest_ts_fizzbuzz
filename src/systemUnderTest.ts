@@ -1,6 +1,15 @@
 export class SystemUnderTest {
-    fizzBuzz(arg0: number) {
-        throw new Error("Method not implemented.")
+    fizzBuzz(arg: number):number|String {
+        if(arg % 3 ==0 && arg % 5 == 0){
+            return "FizzBuzz";
+        }
+        if (arg % 3 ==0) {
+            return "Fizz";
+        }
+        if ( arg % 5 == 0) {
+            return "Buzz";
+        }
+        return arg;
     }
     constructor() {
     }
